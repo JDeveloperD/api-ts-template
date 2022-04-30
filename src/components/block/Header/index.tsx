@@ -13,10 +13,10 @@ const Header = () => {
     <header className='py-3 py-md-4'>
       <Container fluid="xxl">
         <Row className='align-items-center'>
-          <Col xs={6} xl={8} className="d-flex align-items-center gap-3" >
+          <Col xs={6} lg={9} xl={8} className="d-flex align-items-center gap-3" >
             <Button
               variant='only-icon'
-              className='ms-2 d-xl-none p-0 bg-transparent'
+              className='ms-2 d-lg-none p-0 bg-transparent'
               onClick={toggleNav}
             >
               <FaBars />
@@ -24,7 +24,7 @@ const Header = () => {
             <Logo />
             <NavBar openNav={openNav} handleClose={toggleNav} />
           </Col>
-          <Col xs={6} xl={4} className='text-end'>
+          <Col xs={6} lg={3} xl={4} className='text-end'>
             <Button variant='only-icon'>
               <FiSearch />
             </Button>

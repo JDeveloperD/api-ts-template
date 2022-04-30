@@ -21,7 +21,7 @@ const SubListLink = styled.a`
     color: white;
   }
 
-  ${MEDIA_BREAKPOINTS.desktop} {
+  ${MEDIA_BREAKPOINTS.laptop} {
     color: white;
     white-space: nowrap;
   }
@@ -38,7 +38,7 @@ const Divider = styled.div<{ isOpen: boolean }>`
     background: transparent;
   `}
 
-  ${MEDIA_BREAKPOINTS.desktop} {
+  ${MEDIA_BREAKPOINTS.laptop} {
     display: none;
   }
 `;
@@ -57,7 +57,7 @@ const SubList = styled.ul<{ isOpen: boolean }>`
     max-height: 100vh;
   `}
 
-  ${MEDIA_BREAKPOINTS.desktop} {
+  ${MEDIA_BREAKPOINTS.laptop} {
     overflow: initial;
     position: absolute;
     top: calc(100% + 20px);
@@ -93,7 +93,7 @@ const Link = styled.a`
     color: white;
   }
 
-  ${MEDIA_BREAKPOINTS.desktop} {
+  ${MEDIA_BREAKPOINTS.laptop} {
     color: inherit;
     width: auto;
     gap: 0.5rem;
@@ -113,7 +113,7 @@ const Item = styled.li<{ divider?: boolean }>`
     border-bottom: 1px solid ${BORDER_COLOR};
   `}
 
-  ${MEDIA_BREAKPOINTS.desktop} {
+  ${MEDIA_BREAKPOINTS.laptop} {
     border-bottom: 0;
   }
 `;
@@ -126,7 +126,7 @@ const IconArrow = styled.span<{ rotate: boolean }>`
     transform: rotate(180deg);
   `}
 
-  ${MEDIA_BREAKPOINTS.desktop} {
+  ${MEDIA_BREAKPOINTS.laptop} {
     color: inherit;
   }
 `;
@@ -137,7 +137,7 @@ const List = styled.ul`
   overflow-y: scroll;
   padding: 0 1rem;
 
-  ${MEDIA_BREAKPOINTS.desktop} {
+  ${MEDIA_BREAKPOINTS.laptop} {
     overflow-y: initial;
     display: flex;
     gap: 1rem;
@@ -147,7 +147,7 @@ const List = styled.ul`
 `;
 
 const Foot = styled.footer`
-  ${MEDIA_BREAKPOINTS.desktop} {
+  ${MEDIA_BREAKPOINTS.laptop} {
     display: none;
   }
 `;
@@ -157,7 +157,7 @@ const Head = styled.header`
   padding: 1.5rem 1rem;
   justify-content: space-between;
 
-  ${MEDIA_BREAKPOINTS.desktop} {
+  ${MEDIA_BREAKPOINTS.laptop} {
     display: none;
   }
 `;
@@ -180,7 +180,7 @@ const Container = styled.div<{ isOpen: boolean }>`
     max-width: 360px;
   }
 
-  ${MEDIA_BREAKPOINTS.desktop} {
+  ${MEDIA_BREAKPOINTS.laptop} {
     ${POSITION_RELATIVE_RESET}
     background: none;
     max-width: initial;
@@ -201,7 +201,7 @@ const Overlay = styled.div<{ isOpen: boolean }>`
     opacity: 1;
   `}
 
-  ${MEDIA_BREAKPOINTS.desktop} {
+  ${MEDIA_BREAKPOINTS.laptop} {
     display: none;
   }
 `;
