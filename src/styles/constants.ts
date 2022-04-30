@@ -55,7 +55,7 @@ export const COLORS = {
   blue: BLUE_SCALE[500],
   blueWhite: '#56CCF2',
   purple: '#9B51E0',
-  red: BLUE_SCALE[500],
+  red: RED_SCALE[500],
   orange: '#fd7e14',
   yellow: YELLOW_SCALE[500],
   green: GREEN_SCALE[500],
