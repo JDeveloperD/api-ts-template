@@ -1,9 +1,9 @@
 import React, { ButtonHTMLAttributes, FC } from 'react';
-import Spiner from '../Spiner';
 import ButtonStyled from './button.styled';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   isLoading?: boolean
+  componentLoading?: React.ReactNode
   variant?: 'outlined' | 'only-icon'
   color?: 'primary' | 'secondary' | 'accent' | 'light' | 'dark'
   children: React.ReactNode
@@ -12,6 +12,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const Button: FC<ButtonProps> = ({
   children,
   isLoading,
+  componentLoading,
   variant,
   color,
   ...props
@@ -23,14 +24,9 @@ const Button: FC<ButtonProps> = ({
       disabled={isLoading}
       {...props}
     >
-      {isLoading && (
-        <>
-          <Spiner sm />
-          <span className='ps-2'>Cargando...</span>
-        </>
-      )}
 
-      {!isLoading && children}
+      {isLoading ? componentLoading : children}
+
     </ButtonStyled.Wrapper>
   );
 };
