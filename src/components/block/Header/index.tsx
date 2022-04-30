@@ -6,11 +6,12 @@ import { FaBars } from 'react-icons/fa';
 import { FiSearch } from 'react-icons/fi';
 import NavBar from '../NavBar';
 import HeaderAccount from './HeaderAccount';
+import HeaderStyled from './header.styled';
 
 const Header = () => {
   const [openNav, toggleNav] = useToggle();
   return (
-    <header className='py-3 py-md-4'>
+    <HeaderStyled.Wrapper>
       <Container fluid="xxl">
         <Row className='align-items-center'>
           <Col xs={6} lg={9} xl={8} className="d-flex align-items-center gap-3" >
@@ -43,7 +44,7 @@ const Header = () => {
           </Col>
         </Row>
       </Container>
-    </header>
+    </HeaderStyled.Wrapper>
   );
 };
 
