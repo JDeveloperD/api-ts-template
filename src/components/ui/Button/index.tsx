@@ -1,15 +1,14 @@
 import React, { ButtonHTMLAttributes, FC } from 'react';
-import ButtonStyled from './button.styled';
+import ButtonStyled, { ButtonStyledPropsInterface } from './button.styled';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   isLoading?: boolean
   componentLoading?: React.ReactNode
   variant?: 'outlined' | 'only-icon'
-  color?: 'primary' | 'secondary' | 'accent' | 'light' | 'dark'
   children: React.ReactNode
 }
 
-const Button: FC<ButtonProps> = ({
+const Button: FC<ButtonProps & ButtonStyledPropsInterface> = ({
   children,
   isLoading,
   componentLoading,

@@ -1,9 +1,9 @@
 import { RESET_BUTTON, GRAY_SCALE, TRANSITIONS } from '@styles';
+import { ThemePropsInterface } from '@styles/styled';
 import { darken } from 'polished';
 import styled, { css } from 'styled-components';
 
-interface ButtonStyledPropsInterface {
-  color?: 'primary' | 'secondary' | 'accent' | 'light' | 'dark',
+export type ButtonStyledPropsInterface = Pick<ThemePropsInterface, 'color'> & {
   variant?: 'outlined' | 'only-icon'
 }
 
@@ -51,7 +51,7 @@ const Wrapper = styled.button<ButtonStyledPropsInterface>`
    * ---------------------------------------
   **/
   ${({ theme, color, variant }) => {
-    if (variant && variant === 'outlined') {
+    if (variant && color && variant === 'outlined') {
       return css`
         background: transparent;
         color: ${theme.colors[color]};
