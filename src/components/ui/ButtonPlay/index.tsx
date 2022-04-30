@@ -1,10 +1,16 @@
-import { GrPlay } from 'react-icons/gr';
+import { FC, ButtonHTMLAttributes } from 'react';
+import { FiPlay } from 'react-icons/fi';
+import ButtonPlayStyled from './buttonplay.styled';
 
-const ButtonPlay = () => {
+interface ButtonPlayProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  position?: 'center'
+}
+
+const ButtonPlay: FC<ButtonPlayProps> = ({ position, ...props }) => {
   return (
-    <button>
-      <GrPlay />
-    </button>
+    <ButtonPlayStyled.Wrapper position={position} {...props}>
+      <FiPlay />
+    </ButtonPlayStyled.Wrapper>
   );
 };
 
