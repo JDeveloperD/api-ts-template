@@ -12,6 +12,8 @@ declare module 'styled-components' {
       danger: string,
       success: string
       link: string,
+      light: string,
+      gray: string,
       backgroundBody: string,
       textBody: string,
     },
@@ -27,4 +29,8 @@ declare module 'styled-components' {
       default: string
     }
   }
+}
+
+export interface ThemePropsInterface {
+  color?: 'primary'| 'secondary'| 'accent'| 'info'| 'warning'| 'danger'| 'success'| 'link'| 'backgroundBody'| 'textBody'| 'light' | 'gray'
 }
