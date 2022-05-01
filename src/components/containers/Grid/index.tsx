@@ -1,20 +1,16 @@
-import { FC, ReactNode } from 'react';
+import { FC } from 'react';
 import GridStyled from './grid.styled';
 
 type GridProps = {
-  component: ReactNode,
+  render: any,
   columns: 2 | 3 | 4,
   items: Array<any>
 }
 
-const Grid: FC<GridProps> = ({ items, component, columns, ...props }) => {
+const Grid: FC<GridProps> = ({ items, render, columns, ...props }) => {
   return (
     <GridStyled.Wrapper columns={columns}>
-      {items.length > 0 && items.map(item => {
-        return (
-          <GridStyled.Item key={item.id}>{component}</GridStyled.Item>
-        );
-      })}
+      {items.map(render)}
     </GridStyled.Wrapper>
   );
 };

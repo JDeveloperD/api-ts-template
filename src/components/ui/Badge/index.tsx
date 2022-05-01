@@ -1,9 +1,9 @@
+import { ThemePropsInterface } from '@styles/styled';
 import styled, { css } from 'styled-components';
 
-interface BadfeStyledInterface {
+type BadfeStyledInterface = Pick<ThemePropsInterface, 'color'> & {
   position?: 'top-right'
   shape?: 'rounded' | 'circle',
-  color?: 'primary' | 'secondary' | 'accent' | 'dark' | 'light'
 }
 
 const Badge = styled.span<BadfeStyledInterface>`

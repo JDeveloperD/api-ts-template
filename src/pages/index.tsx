@@ -1,15 +1,12 @@
+import { ICourse } from '@api/resources';
 import { BannerCta, CardCourse } from '@components/block';
 import { Grid, Section, Slider } from '@components/containers';
-import type { NextPage } from 'next';
 import { Container } from 'react-bootstrap';
+import { useContext } from 'react';
+import { PublicThemeCtx } from '@contexts/PublicCtx';
 
-export const getServerSideProps = async () => {
-  return {
-    props: {}
-  };
-};
-
-const Home: NextPage = () => {
+const Home = () => {
+  const { courses } = useContext(PublicThemeCtx);
   return (
     <>
       <Container fluid="xxl">
@@ -21,9 +18,11 @@ const Home: NextPage = () => {
       <Section>
         <Container fluid="xxl">
           <Grid
-            items={[1, 2, 3, 4, 5, 6, 7, 8]}
+            items={courses}
             columns={4}
-            component={<CardCourse />}
+            render={(course: ICourse) => (
+              <CardCourse key={course.id} {...course} />
+            )}
           />
         </Container>
       </Section>
