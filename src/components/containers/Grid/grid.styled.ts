@@ -1,7 +1,11 @@
-import { RESET_UL, MEDIA_BREAKPOINTS, COLORS, GRADIENTS_COLORS } from '@styles';
+import { RESET_UL, MEDIA_BREAKPOINTS, GRADIENTS_COLORS } from '@styles';
 import styled, { css } from 'styled-components';
 
-const Wrapper = styled.ul`
+interface GridStyledProps {
+  columns: 2 | 3 | 4
+}
+
+const Wrapper = styled.ul<GridStyledProps>`
   ${RESET_UL}
   display: grid;
   gap: 1rem;
@@ -19,18 +23,6 @@ const Wrapper = styled.ul`
 
 const Item = styled.li`
   display: block;
-  padding: 2rem;
-  &:nth-child(1) {
-    background: ${({ theme }) => theme.colors.secondary};
-  }
-
-  &:nth-child(2) {
-    background: ${GRADIENTS_COLORS.yellow1};
-  }
-
-  &:nth-child(3) {
-    background: ${GRADIENTS_COLORS.blue1};
-  }
 `;
 
 export default {

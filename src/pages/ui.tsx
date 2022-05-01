@@ -1,6 +1,7 @@
 import { CardProduct, FormLogin } from '@components/block';
 import { Grid, Section } from '@components/containers';
-import { Spiner } from '@components/ui';
+import { Spiner, Button } from '@components/ui';
+import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { NextPage } from 'next';
 import { Container } from 'react-bootstrap';
 
@@ -35,6 +36,25 @@ const UI: NextPage = () => {
           <h5>Custom size</h5>
           <Spiner style={{ width: '3rem', height: '3rem' }} />
 
+          <h1>Buttons</h1>
+          <h5>Outlined</h5>
+          <Button
+          color='light'
+          variant='outlined'
+          className='me-2'
+          isLoading={true}
+          componentLoading={<Spiner sm />}
+        >
+          <AiOutlineShoppingCart />
+        </Button>
+        <Button
+          color='primary'
+          isLoading={true}
+          componentLoading={<>
+          <Spiner sm />
+            <span className='ps-2'>Cargando...</span>
+          </>}
+        >Obtener Membresía</Button>
         </Container>
       </Section>
       <Section>

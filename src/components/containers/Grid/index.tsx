@@ -3,7 +3,7 @@ import GridStyled from './grid.styled';
 
 type GridProps = {
   component: ReactNode,
-  columns: number,
+  columns: 2 | 3 | 4,
   items: Array<any>
 }
 

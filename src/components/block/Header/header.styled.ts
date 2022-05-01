@@ -2,7 +2,7 @@ import { MEDIA_BREAKPOINTS, Z_INDEXS } from '@styles';
 import styled from 'styled-components';
 
 const Wrapper = styled.header`
-  padding: 1rem;
+  padding: 1rem 0;
   position: relative;
   z-index: ${Z_INDEXS.header.sticky};
 

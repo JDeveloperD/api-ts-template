@@ -14,11 +14,9 @@ const BannerWithCta = () => {
               Domina la carrera de Agro
             </HeadLine>
             <Paragraph color='gray' className='mb-4'>
-            Miles de personas han aumentado sus ingresos, encontrando su primer empleo o creado su propia empresa estudiando en Agro Club.
-
-            <br/>
-            <br/>
-            ¡Tú puedes ser el próximo!
+              Miles de personas han aumentado sus ingresos, encontrando su primer empleo o creado su propia empresa estudiando en Agro Club.
+              <br/><br/>
+              ¡Tú puedes ser el próximo!
             </Paragraph>
             <Button className='mb-3'>
               Comienza a estudiar ahora!
