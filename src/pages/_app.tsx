@@ -1,23 +1,23 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import type { AppProps } from 'next/app';
-import { ThemeProvider } from 'styled-components';
-import { GlobalStyles, THEME_LIGHT } from '@styles';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { GlobalStyles } from '@styles';
 import { PageLayout } from '@layouts';
 import { useRouterChange } from '@hooks/useRouterChange';
+import { PublicThemeProvider } from '@contexts/PublicCtx';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { loading } = useRouterChange();
 
   return (
-    <ThemeProvider theme={THEME_LIGHT}>
-      <GlobalStyles />
-      {loading && (
-        <h1>CARGANDO...</h1>
-      )}
-      <PageLayout>
-        <Component {...pageProps} />
-      </PageLayout>
-    </ThemeProvider>
+    <PublicThemeProvider>
+        <GlobalStyles />
+        {loading && (
+          <h1>CARGANDO...</h1>
+        )}
+        <PageLayout>
+          <Component {...pageProps} />
+        </PageLayout>
+    </PublicThemeProvider>
   );
 }
 
