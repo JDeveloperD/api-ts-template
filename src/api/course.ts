@@ -6,10 +6,10 @@ export const getCourses = async () => {
     return {
       id: faker.datatype.number({ min: 10000000, max: 99999999 }),
       name: faker.commerce.productName(),
-      level: faker.random.number({ min: 1, max: 3 }),
+      level: faker.datatype.number({ min: 1, max: 3 }),
       video: {
         id: faker.datatype.number({ min: 10000000, max: 99999999 }),
-        thumb: faker.random.image(),
+        thumb: faker.image.image(1234, 2345, true),
         alt: faker.lorem.text(),
         title: faker.lorem.words(10)
       },

@@ -15,7 +15,7 @@ const BannerWithCta = () => {
             </HeadLine>
             <Paragraph color='gray' className='mb-4'>
               Miles de personas han aumentado sus ingresos, encontrando su primer empleo o creado su propia empresa estudiando en Agro Club.
-              <br/><br/>
+              <br /><br />
               ¡Tú puedes ser el próximo!
             </Paragraph>
             <Button className='mb-3'>
@@ -30,6 +30,7 @@ const BannerWithCta = () => {
               layout='fill'
               objectFit='cover'
               quality={100}
+              priority
             />
           </BannerCtaStyled.Image>
         </Col>

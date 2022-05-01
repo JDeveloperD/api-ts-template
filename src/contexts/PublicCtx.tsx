@@ -1,18 +1,18 @@
 import { createContext, FC, ReactNode, useEffect, useState } from 'react';
 import { ThemeProvider as StyledThemeProvide } from 'styled-components';
-import { PublicThemeCtxInterface } from './publicCtx';
+import { PublicThemeCtxInterface } from './types';
 import { THEME_LIGHT } from '@styles';
 import { getCourses } from '@api/course';
 import { ICourse } from '@api/resources';
 
-export const defaultState:PublicThemeCtxInterface = {
+export const defaultState: PublicThemeCtxInterface = {
   nav: { isOpen: false },
   courses: []
 };
 
 export const PublicThemeCtx = createContext<Partial<PublicThemeCtxInterface>>({});
 
-export const PublicThemeProvider:FC<{children: ReactNode}> = ({ children }) => {
+export const PublicThemeProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const [courses, setCourses] = useState<ICourse[]>([]);
   useEffect(() => {
     getCourses()

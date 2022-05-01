@@ -118,11 +118,11 @@ const Item = styled.li<{ divider?: boolean }>`
   }
 `;
 
-const IconArrow = styled.span<{ rotate: boolean }>`
+const IconArrow = styled.span<{ up: boolean }>`
   transition: 0.3s ease-in-out;
   color: ${({ theme }) => theme.colors.primary};
   
-  ${({ rotate }) => rotate && css`
+  ${({ up }) => up && css`
     transform: rotate(180deg);
   `}
 

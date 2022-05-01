@@ -21,8 +21,8 @@ const NavBarItem: FC<NavBarItemProps> = ({ to, text, subItems }) => {
           onClick={() => setActiveSubItems(!activeSubItems)}
         >
           {text}
-          <NavBarStyled.IconArrow rotate={activeSubItems}>
-            <BsChevronDown className='rotate' />
+          <NavBarStyled.IconArrow up={activeSubItems}>
+            <BsChevronDown />
           </NavBarStyled.IconArrow>
         </NavBarStyled.Link>
         <NavBarStyled.Divider isOpen={activeSubItems} />
