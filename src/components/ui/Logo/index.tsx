@@ -4,7 +4,7 @@ import { FC } from 'react';
 import LogoStyled from './logo.styled';
 
 interface LogoProps {
-  size: 'lg'
+  size?: 'lg'
 }
 
 const Logo: FC<LogoProps> = ({ size }) => {

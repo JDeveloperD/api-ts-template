@@ -4,7 +4,7 @@ const useToggle = (initialState = false) => {
   const [state, setState] = useState<boolean>(initialState);
 
   const toggle: MouseEventHandler<HTMLButtonElement> | undefined = useCallback(() => {
-    setState(state => !state);
+    setState(prevState => !prevState);
   }, []);
 
   return [state, toggle];

@@ -10,13 +10,13 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <PublicThemeProvider>
-        <GlobalStyles />
-        {loading && (
-          <h1>CARGANDO...</h1>
-        )}
-        <PageLayout>
-          <Component {...pageProps} />
-        </PageLayout>
+      <GlobalStyles />
+      {loading && (
+        <h1>CARGANDO...</h1>
+      )}
+      <PageLayout>
+        <Component {...pageProps} />
+      </PageLayout>
     </PublicThemeProvider>
   );
 }

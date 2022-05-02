@@ -5,7 +5,7 @@ const nextConfig = {
     styledComponents: true
   },
   images: {
-    domains: ['localhost', 'crehana-public-catalog.imgix.net']
+    domains: ['localhost', 'crehana-public-catalog.imgix.net', 'loremflickr.com']
   }
 };
 

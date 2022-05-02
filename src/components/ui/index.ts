@@ -6,3 +6,4 @@ export { default as Badge } from './Badge';
 export { default as Spiner } from './Spiner';
 export { default as Logo } from './Logo';
 export { default as ButtonPlay } from './ButtonPlay';
+export { default as ButtonCart } from './ButtonCart';

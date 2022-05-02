@@ -32,5 +32,5 @@ declare module 'styled-components' {
 }
 
 export interface ThemePropsInterface {
-  color?: 'primary'| 'secondary'| 'accent'| 'info'| 'warning'| 'danger'| 'success'| 'link'| 'backgroundBody'| 'textBody'| 'light' | 'gray'
+  color?: 'primary' | 'secondary' | 'accent' | 'info' | 'warning' | 'danger' | 'success' | 'link' | 'backgroundBody' | 'textBody' | 'light' | 'gray'
 }

@@ -1,10 +1,10 @@
 import { useContext } from 'react';
 import { Container } from 'react-bootstrap';
 import { SwiperSlide } from 'swiper/react';
-import { ICourse } from '@api/resources';
+import { Course } from '@api/resources';
 import { BannerCta, CardCourse } from '@components/block';
-import { Grid, Section, Slider } from '@components/containers';
-import { PublicThemeCtx } from '@contexts/PublicCtx';
+import { Grid, Modal, Section, Slider } from '@components/containers';
+import PublicThemeCtx from '@contexts/PublicCtx/context';
 
 const Home = () => {
   const { courses } = useContext(PublicThemeCtx);
@@ -25,12 +25,15 @@ const Home = () => {
           <Grid
             items={courses}
             columns={4}
-            render={(course: ICourse) => (
+            render={(course: Course) => (
               <CardCourse key={course.id} {...course} />
             )}
           />
         </Container>
       </Section>
+      <Modal>
+        CONTENIDO MODAL
+      </Modal>
     </>
   );
 };

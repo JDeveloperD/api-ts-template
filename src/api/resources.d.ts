@@ -1,24 +1,23 @@
-export interface IUser {
+export interface User {
   id: number
   email: string
   photo: string
   profile: string
-}
-
-export interface IEstudent extends IUser {}
-
-export interface IInstructor extends IUser {
   name: string
 }
 
-export interface IVideo {
+export interface Estudent extends User { }
+
+export interface Instructor extends User { }
+
+export interface Video {
   id: number
   alt: string
   title: string
   thumb: string
 }
 
-export interface ICourse {
+export interface Course {
   id: number
   name: string
   level: number
@@ -27,11 +26,14 @@ export interface ICourse {
     currencySimbol: string
   },
   discount?: {
-    amount: number
+    amount: string | number
     currencySimbol: string
   },
-  video: IVideo
-  instructor: IInstructor
+  video: Video
+  instructor: Instructor,
+  totalStudents: number,
+  rating: number
+  excerpt: string | null
 }
 
-export interface Post {}
+export interface Post { }
