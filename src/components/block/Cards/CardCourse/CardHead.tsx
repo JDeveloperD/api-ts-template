@@ -3,9 +3,9 @@ import CardCourseStyled from './cardcourse.styled';
 import { FiPlay } from 'react-icons/fi';
 import { FC } from 'react';
 
-const CardHead: FC<{ image: string, level: number }> = ({ image, level }) => {
+const CardHead: FC<{ image: string, level: number, functionOpenVideoPreview: Function }> = ({ image, level, functionOpenVideoPreview }) => {
   return (
-    <CardCourseStyled.Head>
+    <CardCourseStyled.Head onClick={functionOpenVideoPreview}>
       {/**
      * https://crehana-public-catalog.imgix.net/images/courses/promo-images/954d2f1e/f40fa18d.jpeg?auto=format&w=322&h=219&q=55&fit=crop&dpr=2
     */}

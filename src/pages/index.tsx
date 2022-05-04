@@ -2,12 +2,14 @@ import { useContext } from 'react';
 import { Container } from 'react-bootstrap';
 import { SwiperSlide } from 'swiper/react';
 import { Course } from '@api/resources';
-import { BannerCta, CardCourse } from '@components/block';
+import { BannerCta, CardCourse, VideoPreview } from '@components/block';
 import { Grid, Modal, Section, Slider } from '@components/containers';
 import PublicThemeCtx from '@contexts/PublicCtx/context';
+import useToggle from '@hooks/useToggle';
 
 const Home = () => {
   const { courses } = useContext(PublicThemeCtx);
+  const [openVideoPreview, toggleOpenVideoPreview] = useToggle();
   return (
     <>
       <Container fluid="xxl">
@@ -26,14 +28,16 @@ const Home = () => {
             items={courses}
             columns={4}
             render={(course: Course) => (
-              <CardCourse key={course.id} {...course} />
+              <CardCourse key={course.id} functionOpenVideoPreview={toggleOpenVideoPreview} {...course} />
             )}
           />
         </Container>
       </Section>
-      <Modal>
-        CONTENIDO MODAL
-      </Modal>
+      {openVideoPreview && (
+        <Modal closeFunction={toggleOpenVideoPreview}>
+          <VideoPreview />
+        </Modal>
+      )}
     </>
   );
 };

@@ -3,3 +3,4 @@ export { default as Header } from './Header';
 export * from './Forms';
 export * from './Cards';
 export * from './Banners';
+export { default as VideoPreview } from './VideoPreview';

@@ -1,15 +1,14 @@
-import { HeadLine, Small } from '@components/typography';
 import { Button, ButtonCart } from '@components/ui';
 import CardCourseStyled from './cardcourse.styled';
-import { AiOutlineUser } from 'react-icons/ai';
-import { FiThumbsUp } from 'react-icons/fi';
 import { Course } from '@api/resources';
 import { FC, useContext, useEffect, useState } from 'react';
 import { UserCtx } from '@contexts/UserCtx';
 import CardHead from './CardHead';
 import CardBody from './CardBody';
 
-type CardCourseProps = Course
+type CardCourseProps = Course & {
+  functionOpenVideoPreview: Function
+}
 
 const CardCourse: FC<CardCourseProps> = ({
   id,
@@ -20,7 +19,8 @@ const CardCourse: FC<CardCourseProps> = ({
   level,
   video,
   rating,
-  totalStudents
+  totalStudents,
+  functionOpenVideoPreview
 }) => {
   const { addCourseToCart, removeCourseToCart, cart } = useContext(UserCtx);
   const [isCourseInCart, setIsCourseInCart] = useState<boolean>(false);
@@ -34,7 +34,7 @@ const CardCourse: FC<CardCourseProps> = ({
       {/**
        * Head Card
        */}
-      <CardHead image={video.thumb} level={level} />
+      <CardHead image={video.thumb} level={level} functionOpenVideoPreview={functionOpenVideoPreview} />
 
       {/**
        * Body Card
