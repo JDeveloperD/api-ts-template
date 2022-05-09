@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   background-size: cover;
   background-position: center;
   position: relative;
-  margin-top: -100px;
+  margin-top: -85px;
 `;
 
 export default {

@@ -42,9 +42,12 @@ const Button = styled.button<ButtonStyledPropsInterface>`
     }
   `}
 
+  ${({ variant }) => variant === 'icon' && css`
+    padding: 0.65rem;
+  `}
+
   ${({ theme, color, variant }) => variant === 'icon' && color && css`
     color: ${theme.colors[color]};
-    padding: 0.65rem;
   `}
 
   ${({ block }) => block && css`

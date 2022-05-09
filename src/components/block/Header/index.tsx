@@ -27,7 +27,7 @@ const Header = () => {
       <HeaderStyled.Wrapper>
         <Container fluid="xxl">
           <Row className='align-items-center'>
-            <Col xs={6} lg={9} xl={8} className="d-flex align-items-center gap-3" >
+            <Col xs={6} lg={8} xl={8} className="d-flex align-items-center gap-3" >
               <Button
                 color={isLight && 'light'}
                 variant='icon'
@@ -43,7 +43,7 @@ const Header = () => {
                 light={isLight}
               />
             </Col>
-            <Col xs={6} lg={3} xl={4}>
+            <Col xs={6} lg={4} xl={4}>
               <div className="d-flex justify-content-end align-items-center">
                 <Button
                   color={isLight && 'light'}

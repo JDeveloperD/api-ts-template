@@ -74,9 +74,6 @@ const Wrapper = styled.header`
   position: relative;
   z-index: ${Z_INDEXS.header.sticky};
 
-  ${MEDIA_BREAKPOINTS.tablet} {
-    padding: 1.5rem 0;
-  }
 `;
 
 export default {
