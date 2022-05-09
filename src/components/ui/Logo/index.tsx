@@ -13,8 +13,10 @@ const Logo: FC<LogoProps> = ({ size }) => {
       <LogoStyled.Wrapper size={size}>
         <Image
           src="/img/logo/horizontal/gradient.png"
-          width={100}
-          height={35}
+          objectFit='contain'
+          layout='fill'
+          priority
+          quality={100}
         />
       </LogoStyled.Wrapper>
     </Link>

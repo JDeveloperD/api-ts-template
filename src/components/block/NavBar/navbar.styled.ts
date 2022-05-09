@@ -77,7 +77,7 @@ const SubList = styled.ul<{ isOpen: boolean }>`
   }
 `;
 
-const Link = styled.a`
+const Link = styled.a<{light: boolean}>`
   ${RESET_BUTTON}
   text-decoration: none;
   color: white;
@@ -88,13 +88,14 @@ const Link = styled.a`
   padding: 1.4rem 0;
   font-size: 1.25rem;
   text-transform: capitalize;
+  transition: ${TRANSITIONS.base};
 
   &:hover {
     color: white;
   }
 
   ${MEDIA_BREAKPOINTS.laptop} {
-    color: inherit;
+    color: ${({ light }) => !light && 'inherit'};
     width: auto;
     gap: 0.5rem;
     padding: 0;
@@ -119,7 +120,6 @@ const Item = styled.li<{ divider?: boolean }>`
 `;
 
 const IconArrow = styled.span<{ up: boolean }>`
-  transition: 0.3s ease-in-out;
   color: ${({ theme }) => theme.colors.primary};
   
   ${({ up }) => up && css`

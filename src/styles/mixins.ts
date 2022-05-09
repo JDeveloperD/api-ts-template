@@ -14,7 +14,7 @@ export const RESET_BUTTON = css`
   border-style: none;
   background: transparent;
   text-decoration: none;
-  color: ${({ theme }) => theme.colors.link};
+  color: ${({ theme }) => theme.colors.textBody};
   border: 1px solid transparent;
   line-height: 1.75;
   font-weight: 400;
@@ -35,3 +35,5 @@ export const POSITION_RELATIVE_RESET = css`
   left: initial;
   z-index: initial;
 `;
+
+export const OVERLAY = css``;

@@ -58,6 +58,7 @@ const CardCourse: FC<CardCourseProps> = ({
           removeToCartFunction={() => removeCourseToCart(id)}
         />
         <Button
+          variant='filled'
           className='w-100'
           color='primary'
         >Obtener Membresía</Button>

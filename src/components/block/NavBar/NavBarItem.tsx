@@ -8,14 +8,16 @@ export type NavBarItemProps = {
   text: string,
   to: string,
   subItems?: NavBarItemProps[]
+  light?: boolean
 }
 
-const NavBarItem: FC<NavBarItemProps> = ({ to, text, subItems }) => {
+const NavBarItem: FC<NavBarItemProps> = ({ light, to, text, subItems }) => {
   const [activeSubItems, setActiveSubItems] = useState(false);
   if (subItems && subItems?.length > 0) {
     return (
       <NavBarStyled.Item divider={true}>
         <NavBarStyled.Link
+          light={light}
           as="button"
           type='button'
           onClick={() => setActiveSubItems(!activeSubItems)}
@@ -33,7 +35,7 @@ const NavBarItem: FC<NavBarItemProps> = ({ to, text, subItems }) => {
     return (
       <NavBarStyled.Item>
         <Link href={to} passHref>
-          <NavBarStyled.Link>
+          <NavBarStyled.Link light={light}>
             {text}
           </NavBarStyled.Link>
         </Link>

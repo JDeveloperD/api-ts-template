@@ -31,7 +31,7 @@ const CartItem: FC<CartItemProps> = ({
         <HeadLine size={6} className="mb-0">{name}</HeadLine>
         <Small color="gray">{instructor.name}</Small>
 
-        <div>
+        <div className='d-flex gap-2'>
           {discount && (
             <>
               <HeadLine color='danger' size={6} className="mb-0">

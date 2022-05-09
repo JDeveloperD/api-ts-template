@@ -18,7 +18,10 @@ const BannerWithCta = () => {
               <br /><br />
               ¡Tú puedes ser el próximo!
             </Paragraph>
-            <Button className='mb-3'>
+            <Button
+              variant='filled'
+              color='light'
+              className='mb-3'>
               Comienza a estudiar ahora!
             </Button>
           </div>

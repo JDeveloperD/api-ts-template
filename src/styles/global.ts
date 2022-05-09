@@ -18,11 +18,16 @@ export default createGlobalStyle`
     outline: none;
   }
 
+  #__next {
+    min-height: 100vh;
+  }
+
   ${({ theme }) => css`
     body {
       margin: 0;
       padding: 0;
       width: 100%;
+      min-height: 100vh;
       overflow-x: hidden;
       background: ${theme.colors.backgroundBody};
       color: ${theme.colors.textBody};

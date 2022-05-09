@@ -1,11 +1,11 @@
 import type { DefaultTheme } from 'styled-components';
-import { COLORS, FONTS, FONTS_SIZES, GRAY_SCALE, GREEN_SCALE, SHADOWS } from '../constants';
+import { COLORS, FONTS, FONTS_SIZES, GRAY_SCALE, GREEN_SCALE, SHADOWS, YELLOW_SCALE } from '../constants';
 
 const THEME_LIGHT: DefaultTheme = {
   mode: 'light',
   colors: {
-    primary: COLORS.green,
-    secondary: GREEN_SCALE[700],
+    primary: GREEN_SCALE[700],
+    secondary: YELLOW_SCALE[500],
     accent: '#FFBA42',
     info: COLORS.blue,
     warning: COLORS.orange,

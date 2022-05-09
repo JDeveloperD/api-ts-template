@@ -1,27 +1,18 @@
-import FormEmailStyled from './formemail.styled';
+import { FormGroup, Input, InputMessage, Label } from '@components/ui';
 import { FiSend } from 'react-icons/fi';
-import { Small } from '@components/typography';
 
 const FormEmail = ({ ...props }) => {
-  const error = false;
   return (
     <form>
-      <FormEmailStyled.Wrapper error={error}>
-        <FormEmailStyled.Input
-          type="email"
-          {...props}
-        />
-        <FormEmailStyled.Button>
-          <FiSend />
-        </FormEmailStyled.Button>
-      </FormEmailStyled.Wrapper>
-      {error && (
-        <FormEmailStyled.Message color='danger'>
-          <Small>
-            Error completa el correo
-          </Small>
-        </FormEmailStyled.Message>
-      )}
+      <FormGroup invalid={false}>
+        <Input name="email" type="email" />
+        <Label>Correo electronico</Label>
+        <FiSend />
+        {false && (
+          <InputMessage
+            color="danger">El correo es incorrecto</InputMessage>
+        )}
+      </FormGroup>
     </form>
   );
 };

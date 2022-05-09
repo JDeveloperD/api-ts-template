@@ -14,8 +14,12 @@ const Video = styled.div`
     object-fit: cover;
   }
 
-  ${MEDIA_BREAKPOINTS.tablet} {
+  ${MEDIA_BREAKPOINTS.mobile} {
     height: 300px;
+  }
+
+  ${MEDIA_BREAKPOINTS.tablet} {
+    height: 350px;
   }
 
   ${MEDIA_BREAKPOINTS.laptop} {

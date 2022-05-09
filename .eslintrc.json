@@ -25,6 +25,7 @@
   "rules": {
     "react/react-in-jsx-scope": "off",
     "space-before-function-paren": "off",
+    "jsx-a11y/anchor-is-valid": "off",
     "semi": [
       "error",
       "always"

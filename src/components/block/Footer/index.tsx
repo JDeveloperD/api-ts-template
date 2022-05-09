@@ -17,7 +17,7 @@ const Footer = () => {
             </Paragraph>
           </Col>
           <Col sm={6} lg={2} xl={3}>
-            <HeadLine size={4} color='light'>Acerca de</HeadLine>
+            <HeadLine size={4} color='light' className='mb-4'>Acerca de</HeadLine>
             <Paragraph color="gray">¿Por que Agro Club?</Paragraph>
             <Paragraph color="gray">Blog</Paragraph>
             <Paragraph color="gray">Contacto</Paragraph>
@@ -25,13 +25,13 @@ const Footer = () => {
             <Paragraph color="gray">Especialistas</Paragraph>
           </Col>
           <Col sm={6} lg={3}>
-            <HeadLine size={4} color='light'>Contactanos</HeadLine>
+            <HeadLine size={4} color='light' className='mb-4'>Contactanos</HeadLine>
             <Paragraph color="gray"> <IoMailOutline /> hello@agrouclub.pe</Paragraph>
             <Paragraph color="gray"> <IoPhonePortraitOutline /> +91 98765 43210</Paragraph>
             <Paragraph color="gray"> <IoLocationOutline /> 772 Agroavenida Av.Guashinton, Calle 222</Paragraph>
           </Col>
           <Col sm={6} lg={4} xl={3}>
-            <HeadLine size={4} color='light'>Suscribete ahora!</HeadLine>
+            <HeadLine size={4} color='light' className='mb-4'>Suscribete ahora!</HeadLine>
             <FormEmail placeholder="Enviar email" />
           </Col>
         </Row>

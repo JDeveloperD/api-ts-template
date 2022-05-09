@@ -34,26 +34,26 @@ const navMainItems: Array<NavBarItemProps> = [
   {
     id: 'nav-main-item-3',
     text: 'especialistas',
-    to: '/'
+    to: '/especialistas'
   },
   {
     id: 'nav-main-item-4',
     text: 'blog',
-    to: '/'
+    to: '/blog'
   },
   {
     id: 'nav-main-item-5',
     text: 'contacto',
-    to: '/'
+    to: '/contacto'
   },
   {
     id: 'nav-main-item-6',
-    text: 'membresías',
-    to: '/'
+    text: 'miembros',
+    to: '/miembros'
   }
 ];
 
-const NavBar = ({ openNav, handleClose }) => {
+const NavBar = ({ light, openNav, handleClose }) => {
   return (
     <NavBarStyled.Wrapper>
       <NavBarStyled.Overlay isOpen={openNav} onClick={handleClose} />
@@ -70,7 +70,7 @@ const NavBar = ({ openNav, handleClose }) => {
         </NavBarStyled.Head>
         <NavBarStyled.List>
           {navMainItems?.map(itemNav => (
-            <NavBarItem key={itemNav.id} {...itemNav} />
+            <NavBarItem light={light} key={itemNav.id} {...itemNav} />
           ))}
         </NavBarStyled.List>
         <NavBarStyled.Foot>

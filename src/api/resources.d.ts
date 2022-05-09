@@ -1,7 +1,7 @@
 export interface User {
-  id: number
+  id?: number
   email: string
-  photo: string
+  photo: string | null
   profile: string
   name: string
 }

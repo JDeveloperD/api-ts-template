@@ -1,19 +1,9 @@
-import { FC, LabelHTMLAttributes } from 'react';
+import styled from 'styled-components';
 
-interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement> {
-  required?: boolean,
-  text: string
-}
-
-const Label: FC<LabelProps> = ({ text, required, ...props }) => {
-  return (
-    <label {...props} className="form-label">
-      {text}
-      {required && (
-        <abbr title="">*</abbr>
-      )}
-    </label>
-  );
-};
+const Label = styled.label`
+  display: inline-flex;
+  align-items: center;
+  color: ${({ theme }) => theme.colors.light};
+`;
 
 export default Label;

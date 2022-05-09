@@ -5,6 +5,9 @@ import styled from 'styled-components';
 const Wrapper = styled.footer`
   background: ${GRAY_SCALE[1000]};
   padding-top: 4rem;
+  position: absolute;
+  inset-inline-end: 0;
+  inset-inline-start: 0;
 `;
 
 const Copy = styled.div`

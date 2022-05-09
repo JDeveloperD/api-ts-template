@@ -1,4 +1,5 @@
 export { default as Button } from './Button';
+export { default as FormGroup } from './FormGroup';
 export { default as Checkbox } from './Checkbox';
 export { default as Input } from './Input';
 export { default as Label } from './Label';
@@ -7,3 +8,6 @@ export { default as Spiner } from './Spiner';
 export { default as Logo } from './Logo';
 export { default as ButtonPlay } from './ButtonPlay';
 export { default as ButtonCart } from './ButtonCart';
+export { default as InputMessage } from './InputMessage';
+export { default as LineDividerText } from './LineDividerText';
+export { default as ProgressBar } from './ProgressBar';

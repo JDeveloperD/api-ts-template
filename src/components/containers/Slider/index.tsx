@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import SwiperCore, { Pagination } from 'swiper';
+import { Pagination, Autoplay } from 'swiper';
 import { Swiper } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -10,12 +10,12 @@ interface SliderProps {
   render: any
 }
 
-SwiperCore.use([Pagination]);
-
 const Slider: FC<SliderProps> = ({ items, render, ...props }) => {
   return (
     <SliderStyled.Wrapper>
       <Swiper
+        autoplay
+        modules={[Pagination, Autoplay]}
         spaceBetween={20}
         pagination={{ clickable: true }}
       >

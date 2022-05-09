@@ -11,6 +11,10 @@ const Small = styled.small<SmallStyledTypes>`
   ${({ theme, color }) => color && css`
     color: ${theme.colors[color]};
   `}
+
+  ${({ bold }) => bold && css`
+    font-weight: bold;
+  `}
 `;
 
 export default Small;
